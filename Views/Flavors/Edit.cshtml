@@ -1,0 +1,33 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Pierre.Models.Flavor
+
+<h2>Edit</h2>
+
+<h4>Edit: @Html.DisplayFor(model => model.FlavorName)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.FlavorId)
+
+  @Html.LabelFor(model => model.FlavorName, "Name")
+  @Html.EditorFor(model => model.FlavorName)
+
+  @Html.LabelFor(model => model.Instructions)
+  @Html.EditorFor(model => model.Instructions)
+
+  @Html.LabelFor(model => model.Ingredients)
+  @Html.EditorFor(model => model.Ingredients)
+
+  @Html.LabelFor(model => model.Rating)
+  @Html.EditorFor(model => model.Rating)
+
+  @Html.Label("Select Treat")
+  @Html.DropDownList("TreatId")
+
+  <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to Flavors", "Index")</p>

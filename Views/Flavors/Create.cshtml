@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Pierre.Models.Recipe
+
+
+<h4>Add a new flavor</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.FlavorName)
+  @Html.TextBoxFor(model => model.FlavorName)
+
+
+  @* @Html.Label("Select tag")
+  @Html.DropDownList("TagId") *@
+
+  <input type="submit" value="Add new flavor" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all flavors", "Index")</p>
