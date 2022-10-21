@@ -46,3 +46,8 @@ C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Pierre.Views.pdb
 C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Shared\_Layout.cshtml.g.cs
 C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\Create.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\Delete.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\Details.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\Edit.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\Index.cshtml.g.cs
