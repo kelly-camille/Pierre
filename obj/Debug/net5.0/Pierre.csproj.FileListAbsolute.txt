@@ -51,3 +51,10 @@ C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\Dele
 C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\Details.cshtml.g.cs
 C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\Edit.cshtml.g.cs
 C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\Index.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Treats\Create.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Treats\Delete.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Treats\Details.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Treats\Edit.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Treats\Index.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Treats\AddFlavor.cshtml.g.cs
+C:\Users\kelly\OneDrive\Desktop\Pierre\obj\Debug\net5.0\Razor\Views\Flavors\AddTreat.cshtml.g.cs

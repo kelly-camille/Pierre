@@ -23,6 +23,7 @@ namespace Pierre.Controllers
       _db = db;
     }
 
+    [AllowAnonymous]
     public async Task<ActionResult> Index()
     {
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
@@ -32,13 +33,11 @@ namespace Pierre.Controllers
       // ViewBag.RecipeId = new SelectList(_db.Flavors, "FlavorId", "Ingredients");
       return View(userFlavors);
     }
-
     public ActionResult Create()
     {
       ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "TreatName");
       return View();
     }
-
     [HttpPost]
     public async Task<ActionResult> Create(Flavor flavor, int TreatId)
     {
@@ -54,6 +53,7 @@ namespace Pierre.Controllers
       }
       return RedirectToAction("Index");
     }
+  
     public ActionResult Details(int id)
     {
       var thisFlavor = _db.Flavors
@@ -62,13 +62,13 @@ namespace Pierre.Controllers
         .FirstOrDefault(flavor => flavor.FlavorId == id);
       return View(thisFlavor);
     }
+  
     public ActionResult Edit(int id)
     {
       var thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
       ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "TreatName");
       return View(thisFlavor);
     }
-
     [HttpPost]
     public ActionResult Edit(Flavor flavor, int TreatId)
     {
@@ -80,12 +80,30 @@ namespace Pierre.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult AddTreat(int id)
+    {
+      var thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
+      ViewBag.TagId = new SelectList(_db.Treats, "TreatId", "Name");
+      return View(thisFlavor);
+    }
+
+    [HttpPost]
+    public ActionResult AddTag(Flavor flavor, int TreatId)
+    {
+      if (TreatId != 0)
+      {
+        _db.FlavorTreat.Add(new FlavorTreat() { TreatId = TreatId, FlavorId = flavor.FlavorId});
+        _db.SaveChanges();
+      }
+      return RedirectToAction("Index");
+    }
+  
     public ActionResult Delete(int id)
     {
       var thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
       return View(thisFlavor);
     }
-
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
